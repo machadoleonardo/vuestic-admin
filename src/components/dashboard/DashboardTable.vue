@@ -65,12 +65,12 @@
 
 <script>
 import debounce from 'lodash/debounce'
-import data from '../markup-tables/data.json'
+import statusService from '../../services/status.service'
 
 export default {
   data () {
     return {
-      users: data.slice(),
+      users: statusService.getBatches(),
       loading: false,
       term: null,
       mode: 0,
